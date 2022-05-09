@@ -25,12 +25,12 @@ const Header: ForwardRefRenderFunction<HTMLDivElement, Props> = (
         headerHeight,
       )}
     >
-      <div className="h-full">
+      <div className="h-full w-10">
         <Link to="/">
           <Icon name="logo" />
         </Link>
       </div>
-      <div className="h-full">
+      <div className="h-full w-10">
         <Navigation topPosition={headerNavPos} />
       </div>
     </header>

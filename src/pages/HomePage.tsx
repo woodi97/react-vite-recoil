@@ -1,6 +1,6 @@
 import { Button } from '@/components/common';
 import { PageLayout } from '@/components/layout';
-import { modalSelector } from '@/store/modal';
+import { modalSelector } from '@/store/modalAtom';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 

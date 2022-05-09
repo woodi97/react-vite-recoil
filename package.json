@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "npx husky install",
     "dev": "vite",
+    "dev:secure": "vite --https",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint",

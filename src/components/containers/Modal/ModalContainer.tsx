@@ -4,7 +4,7 @@ import ModalBase from './ModalBase';
 import { SignInModal, SignUpModal } from './Content';
 import { ModalType } from '@/core/interface/modal-type';
 import { useRecoilState, useResetRecoilState } from 'recoil';
-import { modalSelector } from '@/store/modal';
+import { modalSelector } from '@/store/modalAtom';
 
 const selectRenderingModal: { [keys in ModalType]: JSX.Element } = {
   SIGNUP: <SignUpModal />,
