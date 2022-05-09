@@ -1,11 +1,16 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from '@/shared/App';
+import { RecoilRoot } from 'recoil';
+import { ModalContainer } from '@/components/containers';
 
 function Root() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
-      <App />
-    </Router>
+    <RecoilRoot>
+      <Router basename={import.meta.env.BASE_URL}>
+        <App />
+      </Router>
+      <ModalContainer />
+    </RecoilRoot>
   );
 }
 
