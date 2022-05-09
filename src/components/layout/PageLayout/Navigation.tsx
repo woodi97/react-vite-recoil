@@ -60,8 +60,10 @@ const Navigation: FC<{
   };
 
   return (
-    <div className="flex items-center h-full">
+    <div className="h-full">
       <IconButton
+        width="90%"
+        height="90%"
         initial={false}
         name="hamburger"
         animate={navShow ? 'open' : 'close'}

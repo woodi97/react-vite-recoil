@@ -7,11 +7,13 @@ const SVG: FC<
     children: React.ReactNode;
     viewBox: string;
     fill?: string;
-    width?: number;
-    height?: number;
+    width?: number | string;
+    height?: number | string;
   } & MotionProps
 > = ({
   children,
+  width = '100%',
+  height = '100%',
   ...props
 }: JSX.IntrinsicAttributes &
   SVGMotionProps<SVGSVGElement> &
@@ -19,8 +21,8 @@ const SVG: FC<
   <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
-    width="currentWidth"
-    height="currentHeight"
+    width={width}
+    height={height}
     {...props}
   >
     {children}

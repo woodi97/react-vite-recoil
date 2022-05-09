@@ -1,12 +1,11 @@
 import { SVG } from '@/components/common';
+import { SvgProps } from '@/core/interface/svg-props';
 import classnames from 'classnames';
 import { FC } from 'react';
 
-const LogoSVG: FC<{
-  className?: string;
-}> = ({ className }) => {
+const LogoSVG: FC<SvgProps> = ({ ...props }) => {
   return (
-    <SVG className={className} viewBox="0 0 128 128">
+    <SVG {...props} viewBox="0 0 128 128">
       <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)">
         <path
           d="M523 1126 c-181 -44 -334 -202 -372 -384 -35 -166 15 -330 138 -453

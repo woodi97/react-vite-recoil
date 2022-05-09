@@ -1,11 +1,10 @@
 import { Path, SVG } from '@/components/common';
+import { SvgProps } from '@/core/interface/svg-props';
 import { FC } from 'react';
 
-const HamburgerSVG: FC<{
-  className?: string;
-}> = ({ className }) => {
+const HamburgerSVG: FC<SvgProps> = ({ ...props  }) => {
   return (
-    <SVG viewBox="0 0 22 22" className={className}>
+    <SVG viewBox="0 0 22 22" {...props}>
       <Path
         variants={{
           close: { d: 'M 2 2.5 L 20 2.5' },

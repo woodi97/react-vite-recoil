@@ -2,17 +2,15 @@ import React, { FC, memo, useMemo } from 'react';
 import HamburgerSVG from '@/assets/Hamburger';
 import LogoSVG from '@/assets/Logo';
 import SettingSVG from '../../../assets/Setting';
+import { SvgProps } from '@/core/interface/svg-props';
 
 export type SVGTypes = 'hamburger' | 'settings' | 'logo';
 
 type IconProps = {
   name: SVGTypes;
-  className?: string;
-  width?: number;
-  height?: number;
 };
 
-const Icon: FC<IconProps> = ({ name, ...props }) => {
+const Icon: FC<IconProps & SvgProps> = ({ name, ...props }) => {
   const IconWrapper = useMemo(() => {
     const _IconSelector: { [keys in SVGTypes]: JSX.Element } = {
       hamburger: <HamburgerSVG {...props} />,

@@ -1,21 +1,22 @@
+import { SvgProps } from '@/core/interface/svg-props';
 import { motion, MotionProps } from 'framer-motion';
 import React, { FC } from 'react';
 import Icon, { SVGTypes } from './Icon';
 
-interface IconButtonProps extends MotionProps {
+export type IconButtonProps = {
   name: SVGTypes;
   type?: 'button' | 'submit' | 'reset';
   onClick: () => void;
-}
+};
 
-const IconButton: FC<IconButtonProps> = ({
-  name,
+const IconButton: FC<IconButtonProps & MotionProps & SvgProps> = ({
   type = 'button',
+  onClick,
   ...props
 }) => {
   return (
-    <motion.button type={type} {...props} className="h-full">
-      <Icon name={name} />
+    <motion.button type={type} onClick={onClick} className="h-full">
+      <Icon {...props} />
     </motion.button>
   );
 };

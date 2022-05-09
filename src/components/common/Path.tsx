@@ -11,6 +11,8 @@ const Path = (
     strokeWidth="3"
     stroke="currentColor"
     strokeLinecap="round"
+    width="100%"
+    height="100%"
     {...props}
   />
 );

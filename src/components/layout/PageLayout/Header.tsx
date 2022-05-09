@@ -1,6 +1,6 @@
 import { forwardRef, ForwardRefRenderFunction } from 'react';
 import classnames from 'classnames';
-import { Icon, IconButton } from '@/components/common';
+import { Icon } from '@/components/common';
 import Navigation from './Navigation';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ const Header: ForwardRefRenderFunction<HTMLDivElement, Props> = (
     <header
       ref={ref}
       className={classnames(
-        `z-[999] flex justify-between w-full h-full top-0 px-3 py-3 bg-primary dark:bg-gray-900`,
+        `z-[999] flex justify-between items-center w-full h-full top-0 px-3 py-3 bg-primary dark:bg-gray-900`,
         fixed ? 'fixed' : 'absolute',
         transparent ? 'transparent' : 'bg-gray-300 dark:bg-gray-700',
         headerHeight,
@@ -30,7 +30,7 @@ const Header: ForwardRefRenderFunction<HTMLDivElement, Props> = (
           <Icon name="logo" />
         </Link>
       </div>
-      <div className="h-full align-middle">
+      <div className="h-full">
         <Navigation topPosition={headerNavPos} />
       </div>
     </header>
